@@ -46,7 +46,6 @@
       border-radius: 99px;
     }
     
-    /* Fade animation for smoother transitions */
     .view-fade {
       animation: viewFade 0.3s ease-out;
     }
@@ -55,7 +54,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Dark Mode Global Overrides */
     .dark {
       --studio-bg: #09090b;
       color-scheme: dark;
@@ -84,7 +82,6 @@
       border-color: #27272a !important;
     }
     
-    /* Remove shadows in dark mode and apply slight darkness to primary buttons */
     .dark .shadow-sm, 
     .dark .shadow, 
     .dark .shadow-md, 
@@ -116,5 +113,6 @@
 </head>
 <body class="selection:bg-zinc-100">
   <div id="root"></div>
+  <script type="module" src="./index.tsx"></script>
 </body>
 </html>
