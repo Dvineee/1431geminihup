@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeminiHub | Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --studio-bg: #ffffff;
+    }
+    html, body { 
+      margin: 0;
+      padding: 0;
+      background-color: var(--studio-bg);
+      color: #09090b;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      width: 100%;
+    }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+    
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #e4e4e7;
+      border-radius: 10px;
+    }
+    
+    .menu-icon-line {
+      height: 1.5px;
+      background-color: #000;
+      border-radius: 99px;
+    }
+    
+    /* Fade animation for smoother transitions */
+    .view-fade {
+      animation: viewFade 0.3s ease-out;
+    }
+    @keyframes viewFade {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Dark Mode Global Overrides */
+    .dark {
+      --studio-bg: #09090b;
+      color-scheme: dark;
+    }
+    .dark html, .dark body {
+      background-color: #09090b;
+      color: #f4f4f5;
+    }
+    .dark .bg-white { background-color: #09090b !important; }
+    .dark .bg-zinc-50 { background-color: #18181b !important; }
+    .dark .bg-zinc-100 { background-color: #27272a !important; }
+    .dark .text-black { color: #ffffff !important; }
+    .dark .text-zinc-900 { color: #f4f4f5 !important; }
+    .dark .text-zinc-600 { color: #a1a1aa !important; }
+    .dark .text-zinc-500 { color: #71717a !important; }
+    .dark .border-zinc-100, 
+    .dark .border-zinc-200, 
+    .dark .border-zinc-300,
+    .dark .border-zinc-50 { border-color: #27272a !important; }
+    .dark .menu-icon-line { background-color: #fff !important; }
+    .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #3f3f46; }
+    .dark .selection:bg-zinc-100 { selection-background-color: #3f3f46; }
+    .dark input, .dark textarea, .dark select {
+      background-color: #18181b !important;
+      color: #fff !important;
+      border-color: #27272a !important;
+    }
+    
+    /* Remove shadows in dark mode and apply slight darkness to primary buttons */
+    .dark .shadow-sm, 
+    .dark .shadow, 
+    .dark .shadow-md, 
+    .dark .shadow-lg, 
+    .dark .shadow-xl, 
+    .dark .shadow-2xl { 
+      box-shadow: none !important; 
+    }
+    
+    .dark .bg-black { 
+      background-color: #e4e4e7 !important; 
+      color: #09090b !important;
+    }
+    
+    .dark .hover\:bg-zinc-50:hover { background-color: #27272a !important; }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0"
+  }
+}
+</script>
+</head>
+<body class="selection:bg-zinc-100">
+  <div id="root"></div>
+</body>
+</html>

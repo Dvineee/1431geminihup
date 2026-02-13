@@ -1,0 +1,9 @@
+{
+  "name": " 1.4.3.1. aaaaa geminihup",
+  "description": "A comprehensive platform to build, manage, and deploy AI-driven chatbots powered by Google Gemini. Includes visual analytics, custom knowledge bases, and live testing.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
